@@ -4,7 +4,62 @@ import Brain from "@/components/brain";
 import Experience from "@/components/Experience";
 import { motion, useInView, useScroll } from "framer-motion";
 import Image from "next/image";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+
+const skillsData = {
+  technical: [
+    {
+      category: "Languages/Markup",
+      skills: "JavaScript, Python, XML, Typescript, C, C++, Java, Visual Basic",
+    },
+    {
+      category: "Cloud Technologies",
+      skills: "Azure, AWS (Cloud Practitioner CLF-C02 Certified), Kubernetes",
+    },
+    {
+      category: " Web",
+      skills:
+        "HTML, CSS, Node.js, React.js, Express.js, RESTful APIs, JSON, Next.js, AngularJS",
+    },
+    {
+      category: "Data Warehousing/Management",
+      skills: "Redshift, BigQuery, Snowflake, ETL, ORM",
+    },
+    {
+      category: "Databases",
+      skills:
+        "MongoDB, MySQL, Capella, Apache Spark, PostgreSQL, DynamoDB, S3, Oracle, Cassandra",
+    },
+    {
+      category: "Scripting",
+      skills: "jQuery, Shell Scripting",
+    },
+    {
+      category: "Operating Systems",
+      skills: "Windows, Linux/Unix",
+    },
+    {
+      category: "Development Tools",
+      skills: "Visual Studio Code, AWS Lambda",
+    },
+    {
+      category: "Microsoft office Suite",
+      skills: "Word, Excel, PowerPoint, Outlook",
+    },
+    {
+      category: "Tools/Framework",
+      skills:
+        "Frappe, Git, GitHub, Databricks, Tableau, Kafka, Web2Py, WordPress, Drupal, Django, Vue.js, Jira(Agile Methodologies), Jenkins",
+    },
+  ],
+  soft: [
+    "Leadership",
+    "Communication",
+    "Teamwork",
+    "Problem-solving",
+    "Adaptability",
+  ],
+};
 
 const AboutPage = () => {
   const containerRef = useRef();
@@ -13,6 +68,8 @@ const AboutPage = () => {
 
   const skillRef = useRef();
   const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
+
+  const [hoveredSkill, setHoveredSkill] = useState();
 
   return (
     <motion.div
@@ -104,86 +161,47 @@ const AboutPage = () => {
             >
               SKILLS
             </motion.h1>
-            {/* SKILL LIST */}
+            {/* TECHNICAL SKILLS */}
             <motion.div
               initial={{ x: "-300px" }}
               animate={isSkillRefInView ? { x: 0 } : {}}
-              className="flex gap-4 flex-wrap"
+              className="flex flex-col gap-4"
             >
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                JavaScript
+              <h2 className="font-bold text-xl">Technical Skills</h2>
+              <div className="flex gap-4 flex-wrap">
+                {skillsData.technical.map((item, index) => (
+                  <div
+                    key={index}
+                    className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black "
+                    onMouseEnter={() => setHoveredSkill(item)}
+                    onMouseLeave={() => setHoveredSkill(null)}
+                  >
+                    {item.category}
+                  </div>
+                ))}
               </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                TypeScript
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                React.js
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Next.js
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                SCSS
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Tailwind CSS
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                MongoDB
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                PostgreSQL
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Node.js
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Nest.js
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Express.js
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Spring Boot
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                GraphQL
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Apollo
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Redux
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Framer Motion
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Three.js
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                WebGL
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Webpack
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Vite
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Docker
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                AWS
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Firebase
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Git
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Figma
+              {hoveredSkill && (
+                <div className="rounded p-2 text-sm cursor-pointer bg-white text-black w-32">
+                  <p>{hoveredSkill.skills}</p>
+                </div>
+              )}
+            </motion.div>
+            {/* SOFT SKILLS */}
+            <motion.div
+              initial={{ x: "-300px" }}
+              animate={isSkillRefInView ? { x: 0 } : {}}
+              className="flex flex-col gap-4"
+            >
+              <h2 className="font-bold text-xl">Soft Skills</h2>
+              <div className="flex gap-4 flex-wrap">
+                {skillsData.soft.map((skill, index) => (
+                  <div
+                    key={index}
+                    className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black"
+                  >
+                    {skill}
+                  </div>
+                ))}
               </div>
             </motion.div>
             {/* SKILL SCROLL SVG */}
