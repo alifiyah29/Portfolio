@@ -16,4 +16,3 @@ const NavLink = ({ link }) => {
 
 export default NavLink;
 
-//className={`rounded p-1 ${pathName === link.url && "bg-black text-white"}`} href={link.url}
