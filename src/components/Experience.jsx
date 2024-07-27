@@ -3,12 +3,10 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 const Experience = () => {
   const experienceRef = useRef();
   const isExperienceRefInView = useInView(experienceRef, { margin: "-100px" });
-  const pathName = usePathname();
   return (
     <div
       className="flex flex-col gap-12 justify-center pb-48"
@@ -37,7 +35,6 @@ const Experience = () => {
             <button className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
               <Link href="/SoftwareEngineer">Software Engineer</Link>
             </button>
-
             {/* JOB DESC */}
             <div className="p-3 text-sm italic">
               Developed a custom Employee Management System using JavaScript and

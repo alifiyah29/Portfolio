@@ -10,7 +10,7 @@ import Logo from "./Logo";
 const links = [
   { url: "/", title: "Home" },
   { url: "/about", title: "About" },
-  { url: "/portfolio", title: "Portfolio" },
+  { url: "/portfolio", title: "Projects" },
   { url: "/contact", title: "Contact" },
 ];
 
