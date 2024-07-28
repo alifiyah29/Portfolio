@@ -4,50 +4,42 @@ import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 
-const Experience = () => {
-  const experienceRef = useRef();
-  const isExperienceRefInView = useInView(experienceRef, { margin: "-100px" });
+const Education = () => {
+  const educationRef = useRef();
+  const isEducationRefInView = useInView(educationRef, { margin: "-100px" });
   return (
     <div
       className="flex flex-col gap-12 justify-center pb-48"
-      ref={experienceRef}
+      ref={educationRef}
     >
-      {/* EXPERIENCE TITLE */}
+      {/* EDUCATION TITLE */}
       <motion.h1
         initial={{ x: "-300px" }}
-        animate={isExperienceRefInView ? { x: "0" } : {}}
+        animate={isEducationRefInView ? { x: "0" } : {}}
         transition={{ delay: 0.2 }}
         className="font-bold text-2xl"
       >
-        EXPERIENCE
+        Education
       </motion.h1>
-      {/* EXPERIENCE LIST */}
+      {/* EDUCATION LIST */}
       <motion.div
         initial={{ x: "-300px" }}
-        animate={isExperienceRefInView ? { x: "0" } : {}}
+        animate={isEducationRefInView ? { x: "0" } : {}}
         className=""
       >
-        {/* EXPERIENCE LIST ITEM */}
+        {/* EDUCATION LIST ITEM */}
         <div className="flex justify-between h-48">
           {/* LEFT */}
           <div className="w-1/3 ">
-            {/* JOB TITLE - Software Engineer*/}
-            <button className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-              <Link href="/SoftwareEngineer">Software Engineer</Link>
-            </button>
-            {/* JOB DESC */}
-            <div className="p-3 text-sm italic">
-              Developed a custom Employee Management System using JavaScript and
-              the MERN stack, gaining experience in CRUD operations, CI/CD
-              integration, and API testing.{" "}
+            {/* EDUCATION TITLE - Master's*/}
+            <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
+              Master of Science in Information Technology
             </div>
-            {/* JOB DATE */}
+            {/* EDUCATION DESC */}
+            <div className="p-3 text-lg">Arizona State University </div>
+            {/* EDUCATION DATE */}
             <div className="p-3 text-red-400 text-sm font-semibold">
-              2021 - 2022
-            </div>
-            {/* JOB COMPANY */}
-            <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
-              LMS Solutions Pvt. Ltd.
+              2022 - 2024
             </div>
           </div>
           {/* CENTER */}
@@ -61,7 +53,7 @@ const Experience = () => {
           {/* RIGHT */}
           <div className="w-1/3 "></div>
         </div>
-        {/* EXPERIENCE LIST ITEM */}
+        {/* Education LIST ITEM */}
         <div className="flex justify-between h-48">
           {/* LEFT */}
           <div className="w-1/3 "></div>
@@ -75,42 +67,22 @@ const Experience = () => {
           </div>
           {/* RIGHT */}
           <div className="w-1/3 ">
-            {/* JOB TITLE - Software Developer Intern */}
-            <button className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-              <Link href="/SoftwareDeveloperIntern">
-                Software Developer Intern
-              </Link>
-            </button>
-            {/* JOB DESC */}
-            <div className="p-3 text-sm italic">
-              Developed and automated lead capture and nurturing by integrating
-              Salesforce and Mailchimp APIs with JavaScript, enhancing front-end
-              functionality and data handling.{" "}
+            {/* EDUCATION TITLE - Software Developer Intern */}
+            <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
+              Bachelor of Technology in Computer Science
             </div>
-            {/* JOB DATE */}
+            {/* EDUCATION DESC */}
+            <div className="p-3 text-lg">
+              Rajiv Gandhi Technical University{" "}
+            </div>
+            {/* EDUCATION DATE */}
             <div className="p-3 text-red-400 text-sm font-semibold">
-              2020 - 2021{" "}
-            </div>
-            {/* JOB COMPANY */}
-            <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
-              OneHash Technologies Pvt. Ltd
+              2017 - 2021{" "}
             </div>
           </div>
-        </div>
-        {/* EXPERIENCE LIST ITEM */}
-        <div className="flex justify-between h-48">
-          {/* LEFT */}
-          <div className="w-1/3 "></div>
-          {/* CENTER */}
-          <div className="w-1/6 flex justify-center">
-            {/* LINE */}
-            <div className="w-1 h-full bg-gray-600 rounded relative"></div>
-          </div>
-          {/* RIGHT */}
-          <div className="w-1/3 "></div>
         </div>
       </motion.div>
-      {/* HOBBIES SCROLL SVG */}
+      {/* EXPERIENCE SCROLL SVG */}
       <motion.svg
         initial={{ opacity: 0.2, y: 0 }}
         animate={{ opacity: 1, y: "10px" }}
@@ -133,4 +105,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default Education;

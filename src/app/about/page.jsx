@@ -1,7 +1,9 @@
 "use client";
 
 import Brain from "@/components/brain";
+import Education from "@/components/Education";
 import Experience from "@/components/Experience";
+import Hobbies from "@/components/Hobbies";
 import Skills from "@/components/Skills";
 import { motion, useScroll } from "framer-motion";
 import Image from "next/image";
@@ -93,8 +95,12 @@ const AboutPage = () => {
           </div>
           {/* SKILLS CONTAINER */}
           <Skills />
+          {/* EDUCATION */}
+          <Education />
           {/* EXPERIENCE CONTAINER */}
           <Experience />
+          {/* HOBBIES */}
+          <Hobbies />
         </div>
         {/* SVG CONTAINER */}
         <div className="hidden lg:block w-1/3 sticky top-0 z-30 xl:w-1/2">
