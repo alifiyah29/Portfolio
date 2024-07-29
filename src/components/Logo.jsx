@@ -6,15 +6,17 @@ const Logo = () => {
     <div className="flex items-center justify-center mt-0.5">
       <Link
         href="/"
-        className="w-50 h-50 bg-gray-900 text-white items-center justify-center rounded text-2xl font-bold"
+        className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-black via-gray-700 to-gray-900 text-white rounded-full text-2xl font-bold transition-transform transform hover:scale-110 shadow-lg"
       >
-        Alifiyah
+        AS
       </Link>
     </div>
   );
 };
 
 export default Logo;
+
+
 
 {
   /* <Link
