@@ -14,6 +14,24 @@ const links = [
   { url: "/contact", title: "Contact" },
 ];
 
+const socialLinks = [
+  {
+    url: "https://github.com/alifiyah29",
+    icon: "/github.png",
+    alt: "GitHub",
+  },
+  {
+    url: "https://www.instagram.com/alifiyah_shahid",
+    icon: "/instagram.png",
+    alt: "Instagram",
+  },
+  {
+    url: "https://www.linkedin.com/in/alifiyahshahid/",
+    icon: "/linkedin.png",
+    alt: "LinkedIn",
+  },
+];
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
@@ -83,15 +101,16 @@ const Navbar = () => {
       </div>
       {/* SOCIAL */}
       <div className="hidden md:flex gap-4 w-1/3">
-        <Link href="/">
-          <Image src="/github.png" alt="" width={24} height={24} />
-        </Link>
-        <Link href="/">
-          <Image src="/instagram.png" alt="" width={24} height={24} />
-        </Link>
-        <Link href="/">
-          <Image src="/linkedin.png" alt="" width={24} height={24} />
-        </Link>
+        {socialLinks.map((social) => (
+          <Link
+            href={social.url}
+            key={social.alt}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image src={social.icon} alt={social.alt} width={24} height={24} />
+          </Link>
+        ))}
       </div>
       {/* RESPONSIVE MENU */}
       <div className="md:hidden">
