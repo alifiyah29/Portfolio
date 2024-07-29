@@ -6,7 +6,7 @@ import emailjs from "@emailjs/browser";
 const ContactPage = () => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
-  const text = "Say Hello";
+  const text = "Let's Chat";
 
   const form = useRef();
 
@@ -58,7 +58,7 @@ const ContactPage = () => {
                 {letter}
               </motion.span>
             ))}
-            😊
+            🤗
           </div>
         </div>
         {/* FORM CONTAINER */}
@@ -68,18 +68,43 @@ const ContactPage = () => {
           className="h-1/2 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-24"
         >
           <span>Hi Alifiyah!</span>
+          <span>
+            My name is{" "}
+            <input
+              placeholder="Your name"
+              type="text"
+              className="bg-transparent border-b-2 border-b-black outline-none"
+              name="user_name"
+            />
+          </span>
           <textarea
+            placeholder="Write your Message Here!"
             rows={6}
             className="bg-transparent border-b-2 border-b-black outline-none resize-none"
             name="user_message"
           />
-          <span>My email is:</span>
-          <input
-            name="user_email"
-            type="text"
-            className="bg-transparent border-b-2 border-b-black outline-none"
-          />
-          <span>Regards</span>
+          <span>You can Contact me via:</span>
+          <span>
+            Email
+            <input
+              placeholder="Your Email"
+              required="true"
+              name="user_email"
+              type="text"
+              className="bg-transparent border-b-2 border-b-black outline-none"
+            />
+          </span>
+          <span>
+            Contact
+            <input
+              placeholder="Your phone number"
+              type="tel"
+              name="user_contact"
+              className="bg-transparent border-b-2 border-b-black outline-none"
+            />
+          </span>
+
+          <span>Regards,</span>
           <button className="bg-purple-200 rounded font-semibold text-gray-600 p-4">
             Send
           </button>

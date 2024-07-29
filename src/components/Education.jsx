@@ -19,7 +19,7 @@ const Education = () => {
         transition={{ delay: 0.2 }}
         className="font-bold text-2xl"
       >
-        Education
+        EDUCATION
       </motion.h1>
       {/* EDUCATION LIST */}
       <motion.div

@@ -23,7 +23,7 @@ const Hobbies = () => {
         transition={{ delay: 0.2 }}
         className="font-bold text-2xl"
       >
-        Hobbies
+        HOBBIES
       </motion.h1>
       {/* HOBBIES LIST */}
       <motion.div
@@ -42,7 +42,7 @@ const Hobbies = () => {
           ))}
         </div>
       </motion.div>
-      {/* ACHIEVEMENTS SCROLL SVG */}
+      {/* ACHIEVEMENTS SCROLL SVG
       <motion.svg
         initial={{ opacity: 0.2, y: 0 }}
         animate={{ opacity: 1, y: "10px" }}
@@ -60,7 +60,7 @@ const Hobbies = () => {
         ></path>
         <path d="M12 6V14" stroke="#000000" strokeWidth="1"></path>
         <path d="M15 11L12 14L9 11" stroke="#000000" strokeWidth="1"></path>
-      </motion.svg>
+      </motion.svg> */}
     </div>
   );
 };

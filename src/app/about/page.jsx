@@ -1,5 +1,6 @@
 "use client";
 
+import Achievements from "@/components/Achievements";
 import Brain from "@/components/brain";
 import Education from "@/components/Education";
 import Experience from "@/components/Experience";
@@ -93,6 +94,7 @@ const AboutPage = () => {
               ></path>
             </motion.svg>
           </div>
+
           {/* SKILLS CONTAINER */}
           <Skills />
           {/* EDUCATION */}
@@ -101,6 +103,8 @@ const AboutPage = () => {
           <Experience />
           {/* HOBBIES */}
           <Hobbies />
+        {/* ACHIVEMENTS
+        <Achievements /> */}
         </div>
         {/* SVG CONTAINER */}
         <div className="hidden lg:block w-1/3 sticky top-0 z-30 xl:w-1/2">
