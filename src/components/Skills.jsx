@@ -14,7 +14,7 @@ const skillsData = {
       skills: "Azure, AWS, Kubernetes",
     },
     {
-      category: " Web",
+      category: "Web",
       skills:
         "HTML, CSS, Node.js, React.js, Express.js, RESTful APIs, JSON, Next.js, AngularJS",
     },
@@ -40,11 +40,11 @@ const skillsData = {
       skills: "Visual Studio Code, AWS Lambda",
     },
     {
-      category: "Microsoft office Suite",
+      category: "Microsoft Office Suite",
       skills: "Word, Excel, PowerPoint, Outlook",
     },
     {
-      category: "Tools/Framework",
+      category: "Tools/Frameworks",
       skills:
         "Frappe, Git, GitHub, Databricks, Tableau, Kafka, Web2Py, WordPress, Drupal, Django, Vue.js, Jira, Jenkins",
     },
@@ -63,8 +63,10 @@ const Skills = () => {
   const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
 
   const [hoveredSkill, setHoveredSkill] = useState();
+  const [hovered, setHovered] = useState(false);
+
   return (
-    <div className="flex flex-col gap-12 justify-center" ref={skillRef}>
+    <div className="flex flex-col gap-12 justify-center relative" ref={skillRef}>
       {/* SKILL TITLE */}
       <motion.h1
         initial={{ x: "-300px" }}
@@ -85,18 +87,34 @@ const Skills = () => {
           {skillsData.technical.map((item, index) => (
             <div
               key={index}
-              className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black "
-              onMouseEnter={() => setHoveredSkill(item)}
-              onMouseLeave={() => setHoveredSkill(null)}
+              className="rounded p-3 text-sm cursor-pointer bg-black text-white hover:bg-gray-700 hover:text-white transition-transform duration-300"
+              onMouseEnter={() => {
+                setHoveredSkill(item);
+                setHovered(true);
+              }}
+              onMouseLeave={() => {
+                setHoveredSkill(null);
+                setHovered(false);
+              }}
             >
               {item.category}
             </div>
           ))}
         </div>
         {hoveredSkill && (
-          <div className="rounded p-2 text-sm cursor-pointer bg-white text-black w-28">
-            <p>{hoveredSkill.skills}</p>
-          </div>
+          <motion.div
+            className={`grid grid-cols-2 gap-2 mt-4 ${hovered ? "block" : "hidden"}`}
+            style={{ marginTop: hovered ? "20px" : "0px" }}
+          >
+            {hoveredSkill.skills.split(', ').map((skill, index) => (
+              <div
+                key={index}
+                className="rounded-lg p-2 text-sm bg-gray-200 text-black"
+              >
+                {skill}
+              </div>
+            ))}
+          </motion.div>
         )}
       </motion.div>
       {/* SOFT SKILLS */}
@@ -104,13 +122,14 @@ const Skills = () => {
         initial={{ x: "-300px" }}
         animate={isSkillRefInView ? { x: 0 } : {}}
         className="flex flex-col gap-4"
+        style={{ marginTop: hovered ? "20px" : "0px", transition: "margin-top 0.3s" }}
       >
         <h2 className="font-bold text-xl">Soft Skills</h2>
         <div className="flex gap-4 flex-wrap">
           {skillsData.soft.map((skill, index) => (
             <div
               key={index}
-              className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black"
+              className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-gray-700 hover:text-white transition-transform duration-300"
             >
               {skill}
             </div>
