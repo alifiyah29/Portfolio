@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import Image from "next/image";
 import SoftwareEngineer from "@/app/Experiences/SoftwareEngineer";
 import SoftwareDeveloperIntern from "@/app/Experiences/SoftwareDeveloperIntern";
 
