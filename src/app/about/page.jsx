@@ -1,9 +1,7 @@
 "use client";
 
-import Achievements from "@/components/Achievements";
 import Brain from "@/components/brain";
-import Education from "@/components/Education";
-import Experience from "@/components/Experience";
+import EducationAndExperience from "@/components/EducationAndExperience";
 import Hobbies from "@/components/Hobbies";
 import Skills from "@/components/Skills";
 import { motion, useScroll } from "framer-motion";
@@ -97,10 +95,8 @@ const AboutPage = () => {
 
           {/* SKILLS CONTAINER */}
           <Skills />
-          {/* EDUCATION */}
-          <Education />
-          {/* EXPERIENCE CONTAINER */}
-          <Experience />
+          {/* EDUCATION AND EXPERIENCE*/}
+          <EducationAndExperience />
           {/* HOBBIES */}
           <Hobbies />
         {/* ACHIVEMENTS
