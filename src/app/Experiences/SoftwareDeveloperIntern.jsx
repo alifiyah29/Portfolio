@@ -7,10 +7,10 @@ const SoftwareDeveloperIntern = ({ setShowPrompt }) => {
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 p-4">
       <div className="bg-white p-4 md:p-6 shadow-lg rounded-lg relative max-w-screen-xl w-full max-h-[70vh] overflow-auto">
         <button
-          className="absolute top-2 right-2 bg-red-500 text-white rounded-full p-2"
+          className="absolute top-4 right-4 text-xl"
           onClick={() => setShowPrompt(false)}
         >
-          X
+          &times;
         </button>
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -57,7 +57,8 @@ const SoftwareDeveloperIntern = ({ setShowPrompt }) => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              Software Developer Intern, OneHash Technologies Pvt. Ltd., Indore, MP, India
+              Software Developer Intern, OneHash Technologies Pvt. Ltd., Indore,
+              MP, India
             </motion.h2>
             <motion.p
               className="text-base md:text-lg lg:text-xl text-gray-700 mb-4"
@@ -65,7 +66,18 @@ const SoftwareDeveloperIntern = ({ setShowPrompt }) => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <strong>Enhanced Lead Capture and Nurturing with JavaScript & APIs (Front-End Development):</strong> Designed and developed custom user interfaces (UIs) with JavaScript to seamlessly integrate lead generators like Salesforce Leads and Mailchimp into OneHash&aposs CRM. I leveraged these APIs to understand data structures and establish a smooth flow of lead information between platforms. This streamlined lead capture for clients, eliminating the need to switch platforms, and automated data transfer to OneHash&aposs database, improving lead nurturing efficiency.
+              <strong>
+                Enhanced Lead Capture and Nurturing with JavaScript & APIs
+                (Front-End Development):
+              </strong>{" "}
+              Designed and developed custom user interfaces (UIs) with
+              JavaScript to seamlessly integrate lead generators like Salesforce
+              Leads and Mailchimp into OneHash&aposs CRM. I leveraged these APIs
+              to understand data structures and establish a smooth flow of lead
+              information between platforms. This streamlined lead capture for
+              clients, eliminating the need to switch platforms, and automated
+              data transfer to OneHash&aposs database, improving lead nurturing
+              efficiency.
             </motion.p>
             <motion.p
               className="text-base md:text-lg lg:text-xl text-gray-700 mb-4"
@@ -73,7 +85,15 @@ const SoftwareDeveloperIntern = ({ setShowPrompt }) => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <strong>Automated Data Transfer with JavaScript:</strong> Implemented functionalities within the custom UI to automatically transfer captured lead data to OneHash&aposs secure database using JavaScript. This involved writing code to handle data manipulation and API calls to the database. By automating data transfer, I eliminated manual entry for clients and improved the lead nurturing process. This solidified my front-end development skills, requiring proficiency in data handling and API interaction.
+              <strong>Automated Data Transfer with JavaScript:</strong>{" "}
+              Implemented functionalities within the custom UI to automatically
+              transfer captured lead data to OneHash&aposs secure database using
+              JavaScript. This involved writing code to handle data manipulation
+              and API calls to the database. By automating data transfer, I
+              eliminated manual entry for clients and improved the lead
+              nurturing process. This solidified my front-end development
+              skills, requiring proficiency in data handling and API
+              interaction.
             </motion.p>
             <motion.p
               className="text-base md:text-lg lg:text-xl text-gray-700 mb-4"
@@ -81,7 +101,15 @@ const SoftwareDeveloperIntern = ({ setShowPrompt }) => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <strong>Expanded Technical Understanding through API Integration:</strong> Through in-depth work with lead generation APIs like Salesforce Leads and Mailchimp, I gained valuable experience in understanding data structures and communication protocols used by external applications. This broadened my technical knowledge beyond UI development and prepared me for future integrations with various external services.
+              <strong>
+                Expanded Technical Understanding through API Integration:
+              </strong>{" "}
+              Through in-depth work with lead generation APIs like Salesforce
+              Leads and Mailchimp, I gained valuable experience in understanding
+              data structures and communication protocols used by external
+              applications. This broadened my technical knowledge beyond UI
+              development and prepared me for future integrations with various
+              external services.
             </motion.p>
             <motion.p
               className="text-base md:text-lg lg:text-xl text-gray-700 mb-4"
@@ -89,7 +117,8 @@ const SoftwareDeveloperIntern = ({ setShowPrompt }) => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-              <strong>Skills Acquired:</strong> JavaScript, Salesforce API, Mailchimp API, UI/UX Design, CRM Integration.
+              <strong>Skills Acquired:</strong> JavaScript, Salesforce API,
+              Mailchimp API, UI/UX Design, CRM Integration.
             </motion.p>
           </div>
         </motion.div>
