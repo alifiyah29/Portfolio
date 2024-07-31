@@ -85,7 +85,7 @@ const ContactPage = () => {
           />
           <span>You can Contact me via:</span>
           <span>
-            Email
+            Email{" "}
             <input
               placeholder="Your Email"
               required="true"
@@ -95,7 +95,7 @@ const ContactPage = () => {
             />
           </span>
           <span>
-            Contact
+            Contact{" "}
             <input
               placeholder="Your phone number"
               type="tel"

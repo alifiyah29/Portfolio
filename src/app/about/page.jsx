@@ -39,7 +39,7 @@ const AboutPage = () => {
             {/* BIOGRAPHY DESC */}
             <p className="text-lg">
               Alifiyah Shahid is a versatile software engineer and full-stack
-              developer with a Master’s in Information Technology from Arizona
+              developer with a Master&aposs in Information Technology from Arizona
               State University. Over the past two years, she has turned complex
               challenges into streamlined solutions, from developing custom
               Employee Management Systems at LMS Solutions to enhancing lead
@@ -99,8 +99,6 @@ const AboutPage = () => {
           <EducationAndExperience />
           {/* HOBBIES */}
           <Hobbies />
-        {/* ACHIVEMENTS
-        <Achievements /> */}
         </div>
         {/* SVG CONTAINER */}
         <div className="hidden lg:block w-1/3 sticky top-0 z-30 xl:w-1/2">

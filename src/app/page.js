@@ -1,9 +1,15 @@
+// app/page.js or wherever your Homepage component is defined
 "use client";
 
+import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Achievements from "@/components/Achievements";
+
 const Homepage = () => {
+  const [showAchievements, setShowAchievements] = useState(false);
+
   return (
     <motion.div
       className="h-full"
@@ -32,19 +38,21 @@ const Homepage = () => {
           </p>
           {/* BUTTONS */}
           <div className="w-full flex gap-4">
-            <button className="p-4 rounded-lg ring-1 ring-black bg-black text-white">
-            <Link href="/portfolio">
-            View My Work
-              </Link>
+            <button
+              className="p-4 rounded-lg ring-1 ring-black bg-black text-white"
+              onClick={() => setShowAchievements(true)}
+            >
+              My Achievements
             </button>
             <button className="p-4 rounded-lg ring-1 ring-black">
-            <Link href="/contact">
-            Contact Me
-              </Link>
+              <Link href="/contact">Contact Me</Link>
             </button>
           </div>
         </div>
       </div>
+      {showAchievements && (
+        <Achievements setShowAchievements={setShowAchievements} />
+      )}
     </motion.div>
   );
 };
