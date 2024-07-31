@@ -7,6 +7,8 @@ const nextConfig = {
       { protocol: "https", hostname: "github.com" },
       { protocol: "https", hostname: "instagram.com" },
       { protocol: "https", hostname: "linkedin.com/in" },
+      { protocol: "https", hostname: "onehash.ai" },
+      { protocol: "https", hostname: "lmsin.com" },
     ],
   },
 };

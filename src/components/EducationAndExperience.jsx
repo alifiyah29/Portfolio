@@ -4,12 +4,17 @@ import React, { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import SoftwareEngineer from "@/app/Experiences/SoftwareEngineer";
 import SoftwareDeveloperIntern from "@/app/Experiences/SoftwareDeveloperIntern";
+import Link from "next/link";
 
 const EducationAndExperience = () => {
   const sectionRef = useRef();
   const isSectionRefInView = useInView(sectionRef, { margin: "-100px" });
-  const [showSoftwareEngineerPrompt, setShowSoftwareEngineerPrompt] = useState(false);
-  const [showSoftwareDeveloperInternPrompt, setShowSoftwareDeveloperInternPrompt] = useState(false);
+  const [showSoftwareEngineerPrompt, setShowSoftwareEngineerPrompt] =
+    useState(false);
+  const [
+    showSoftwareDeveloperInternPrompt,
+    setShowSoftwareDeveloperInternPrompt,
+  ] = useState(false);
 
   return (
     <div className="flex flex-col gap-12 justify-center pb-48" ref={sectionRef}>
@@ -81,9 +86,9 @@ const EducationAndExperience = () => {
             <div className="p-3 text-red-400 text-sm font-semibold">
               2021 - 2022
             </div>
-            <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
-              LMS Solutions Pvt. Ltd.
-            </div>
+            <button className="p-1 rounded bg-white text-sm font-semibold w-fit">
+              <Link href='https://www.lmsin.com/'>LMS Solutions Pvt. Ltd.</Link>
+            </button>
           </div>
         </motion.div>
 
@@ -109,9 +114,9 @@ const EducationAndExperience = () => {
             <div className="p-3 text-red-400 text-sm font-semibold">
               2020 - 2021
             </div>
-            <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
-              OneHash Technologies
-            </div>
+            <button className="p-1 rounded bg-white text-sm font-semibold w-fit">
+              <Link href="https://www.onehash.ai/">OneHash Technologies Pvt. Ltd.</Link>
+            </button>
           </div>
           <div className="w-1/6 flex justify-center">
             <div className="w-1 h-full bg-gray-600 rounded relative">
@@ -150,7 +155,9 @@ const EducationAndExperience = () => {
         <SoftwareEngineer setShowPrompt={setShowSoftwareEngineerPrompt} />
       )}
       {showSoftwareDeveloperInternPrompt && (
-        <SoftwareDeveloperIntern setShowPrompt={setShowSoftwareDeveloperInternPrompt} />
+        <SoftwareDeveloperIntern
+          setShowPrompt={setShowSoftwareDeveloperInternPrompt}
+        />
       )}
 
       {/* HOBBIES SCROLL SVG */}
