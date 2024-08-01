@@ -11,7 +11,11 @@ const items = [
     color: "from-red-300 to-blue-300",
     title: "Chatify",
     desc: "Full-Stack Chat App",
-    img: "https://images.pexels.com/photos/6636906/pexels-photo-6636906.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    img: [
+      "https://images.pexels.com/photos/3868767/pexels-photo-3868767.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/6636906/pexels-photo-6636906.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "/Chatify.jpg",
+    ],
     details: [
       "Built a real-time chat application utilizing ReactJS for the frontend, NodeJS and ExpressJS for the backend, and MongoDB for data storage.",
       "Implemented a Model-View-Controller structure to enhance code organization, maintainability, and scalability.",
@@ -24,7 +28,11 @@ const items = [
     color: "from-blue-300 to-violet-300",
     title: "Game Genre Analysis",
     desc: "Insightful Database Solution",
-    img: "https://images.pexels.com/photos/8259595/pexels-photo-8259595.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    img: [
+      "https://images.pexels.com/photos/7862655/pexels-photo-7862655.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/7915225/pexels-photo-7915225.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "/GameGenre.png",
+    ],
     details: [
       "Designed and implemented a combined MySQL and MongoDB database to efficiently store and analyze structured and unstructured gaming data.",
       "Utilized Apache Kafka to capture and process player behavior data in real-time, enabling rapid insights.",
@@ -37,7 +45,11 @@ const items = [
     color: "from-violet-300 to-purple-300",
     title: "Air Quality Monitoring System",
     desc: "IoT Based System",
-    img: "https://media.istockphoto.com/id/1863993839/photo/asian-man-using-a-smartphone-scanning-the-weather-over-smog-city-from-pm2-5-dust-view-of.jpg?s=2048x2048&w=is&k=20&c=XY_e225aNxWcgX_5MQw4VjdNrIIfK_DefbYi9hji1I0=",
+    img: [
+      "https://images.pexels.com/photos/929385/pexels-photo-929385.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/459728/pexels-photo-459728.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "/AirQuality.png",
+    ],
     details: [
       "Designed and built Arduino-based sensors to collect air quality data from multiple locations.",
       "Created a web platform to visualize real-time air quality data, including interactive charts and graphs.",
@@ -50,7 +62,11 @@ const items = [
     color: "from-purple-300 to-red-300",
     title: "Let Us Write Online",
     desc: "Blogging Website",
-    img: "https://media.istockphoto.com/id/1247171756/photo/working-home-concept.jpg?s=2048x2048&w=is&k=20&c=otZMlecH0NmiMoWumPyuXZOFE6i5oHDMS0EiZ3RedJY=",
+    img: [
+      "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/374074/pexels-photo-374074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/733856/pexels-photo-733856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    ],
     details: [
       "Constructed a blogging platform using MongoDB, Express.js, React.js, and Node.js technologies.",
       "Implemented features like user accounts, comment sections, and content moderation to enhance user experience.",
@@ -90,14 +106,29 @@ const PortfolioPage = () => {
                 className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color}`}
                 key={item.id}
               >
-                <div className="flex flex-col gap-8 text-white">
+                <div className="flex flex-col gap-8 text-white items-center">
                   <h1 className="text-xl font-bold md:text-4xl lg:text-6xl xl:text-8xl">
                     {item.title}
                   </h1>
-                  <div className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[300px] xl:w-[600px] xl:h-[350px] mb-4">
-                    <Image src={item.img} alt="" fill />
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-5xl">
+                    {item.img.map((src, index) => (
+                      <motion.div
+                        key={index}
+                        className="relative w-full h-48 sm:h-56 md:h-64 lg:h-72 overflow-hidden rounded-lg"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                      >
+                        <Image
+                          src={src}
+                          alt=""
+                          layout="fill"
+                          className="object-cover"
+                        />
+                      </motion.div>
+                    ))}
                   </div>
-                  <p className="w-80 md:w-96 lg:w-[500px] lg:text-lg xl:w-[600px]">
+                  <h1 className="w-full md:w-3/4 lg:w-1/2 xl:w-1/2 font-bold text-2xl md:text-3xl lg:text-4xl">
                     {item.desc}
                     <button
                       className="ml-2 text-lg text-yellow-400 hover:text-yellow-300"
@@ -105,13 +136,13 @@ const PortfolioPage = () => {
                     >
                       <FaChevronDown />
                     </button>
-                  </p>
+                  </h1>
                   <motion.div
                     className={`overflow-hidden transition-max-height duration-500 ease-in-out ${
                       expandedItem === item.id ? "max-h-[500px]" : "max-h-0"
                     }`}
                   >
-                    <ul className="list-disc list-inside space-y-2 px-2 text-base md:text-lg lg:text-xl">
+                    <ul className="list-disc list-inside space-y-2 px-4 md:px-8 lg:px-12 text-left text-lg md:text-xl lg:text-2xl">
                       {item.details.map((detail, index) => (
                         <motion.li
                           key={index}
