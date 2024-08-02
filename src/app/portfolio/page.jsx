@@ -1,4 +1,5 @@
 "use client";
+
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -17,10 +18,10 @@ const items = [
       "/Chatify.jpg",
     ],
     details: [
-      "Built a real-time chat application utilizing ReactJS for the frontend, NodeJS and ExpressJS for the backend, and MongoDB for data storage.",
-      "Implemented a Model-View-Controller structure to enhance code organization, maintainability, and scalability.",
-      "Deployed the application on AWS to provide a robust and accessible platform for users.",
-      "Gained hands-on experience with modern web development technologies and cloud infrastructure.",
+      "Developed Chatify a sophisticated real-time chat application employing the MVC (Model-View-Controller) architecture to ensure clear separation of concerns. The Model layer utilizes MongoDB for scalable and flexible data storage, where user profiles and chat messages are organized in distinct collections. The View layer is built using ReactJS, providing a dynamic and responsive user interface with reusable components that streamline the development process and improve maintainability. The Controller layer, powered by NodeJS and ExpressJS, handles server-side logic, user authentication, and message routing, facilitating efficient communication between the front end and the database.",
+      "Implemented robust real-time communication features using WebSockets in conjunction with NodeJS and ExpressJS. This integration ensures that users receive instant updates and notifications as messages are sent and received. The application’s real-time capabilities are crucial for maintaining an interactive and engaging user experience, which is essential for any modern chat application.",
+      "Successfully deployed the Chatify application on AWS, leveraging cloud services to ensure a robust, scalable, and accessible platform for users. Configured and managed AWS resources to handle varying loads and provide high availability, allowing the application to scale efficiently and maintain performance under different usage scenarios. This experience enhanced my proficiency in cloud infrastructure and deployment strategies.",
+      "Gained comprehensive hands-on experience with a suite of modern web development technologies. By building and deploying Chatify, I deepened my understanding of ReactJS for front-end development, NodeJS and ExpressJS for backend services, and MongoDB for data storage. This project not only improved my technical skills but also provided practical insights into integrating these technologies to create a cohesive and scalable web application.",
     ],
   },
   {
@@ -34,10 +35,10 @@ const items = [
       "/GameGenre.png",
     ],
     details: [
-      "Designed and implemented a combined MySQL and MongoDB database to efficiently store and analyze structured and unstructured gaming data.",
-      "Utilized Apache Kafka to capture and process player behavior data in real-time, enabling rapid insights.",
-      "Created interactive Tableau dashboards to present complex player data in a clear and actionable format.",
-      "Optimized the database system for handling large volumes of gaming data and ensuring efficient query performance.",
+      "Designed and implemented a hybrid database solution combining MySQL and MongoDB to analyze player behavior. MySQL was used to store structured game data such as genres and ratings, enabling efficient querying. MongoDB, integrated with Apache Kafka, captured real-time player activity data, including playtime and preferences, allowing for flexible and scalable data storage.",
+      "Utilized Apache Kafka to handle real-time data capture and processing, which facilitated immediate insights into player behavior. This setup allowed for rapid data ingestion and analysis, providing actionable insights through interactive Tableau dashboards that revealed trends such as playtime patterns and genre preferences.",
+      "Created interactive Tableau dashboards to transform complex gaming data into actionable insights. The dashboards enabled users to visualize player behavior trends and genre preferences, enhancing the ability to make informed decisions based on real-time data analysis.",
+      "The project solidified skills in designing and implementing scalable hybrid database architectures, combining MySQL’s efficiency with MongoDB’s flexibility. It also provided valuable experience in translating complex data into actionable insights through Tableau, essential for data-driven decision-making in the gaming industry.",
     ],
   },
   {
@@ -51,10 +52,10 @@ const items = [
       "/AirQuality.png",
     ],
     details: [
-      "Designed and built Arduino-based sensors to collect air quality data from multiple locations.",
-      "Created a web platform to visualize real-time air quality data, including interactive charts and graphs.",
-      "Processed and analyzed collected air quality data to identify trends and patterns.",
-      "Published a research paper detailing the project's methodology, findings, and implications for air quality management.",
+      "Designed and built an Air Quality Monitoring System using Arduino-based sensors to collect air quality data from multiple locations. The system provided real-time monitoring of air pollution levels, allowing for timely responses to environmental changes.",
+      "Developed a web platform to visualize air quality data in real-time, featuring interactive charts and graphs for easy interpretation. The platform enabled users to monitor air quality across different districts and track trends over time.",
+      "Analyzed the collected air quality data to identify patterns and trends, contributing to a better understanding of local air quality conditions. This analysis helped in making data-driven decisions for improving environmental health.",
+      "Published a research paper detailing the project's methodology, findings, and implications for air quality management. The paper highlighted the project's contribution to understanding and managing air pollution through innovative technology and data analysis.",
     ],
   },
   {
@@ -68,10 +69,10 @@ const items = [
       "https://images.pexels.com/photos/733856/pexels-photo-733856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     ],
     details: [
-      "Constructed a blogging platform using MongoDB, Express.js, React.js, and Node.js technologies.",
-      "Implemented features like user accounts, comment sections, and content moderation to enhance user experience.",
-      "Achieved significant user growth and increased content creation through effective user engagement strategies.",
-      "Led the development process, ensuring timely delivery and successful platform launch.",
+      "Built Let Us Write Online, a blogging platform utilizing MongoDB, Express.js, React.js, and Node.js to provide a comprehensive solution for content creation and management. The platform includes features for user accounts, content creation, and moderation.",
+      "Implemented user accounts and comment sections to enhance user engagement and interaction. The platform supports various content types and allows for community participation through features like comments and moderation.",
+      "Achieved significant user growth and increased content creation by developing effective user engagement strategies. These strategies included interactive features and user-friendly design elements to attract and retain users.",
+      "Led the development process from inception to launch, ensuring timely delivery and successful platform deployment. This experience demonstrated project management skills and the ability to deliver a fully functional and scalable blogging solution.",
     ],
   },
 ];
@@ -95,7 +96,15 @@ const PortfolioPage = () => {
       transition={{ duration: 1 }}
     >
       <div className="h-[600vh] relative" ref={ref}>
-        <div className="w-screen h-[calc(100vh-6rem)] flex items-center justify-center text-8xl text-center">
+        <div
+          className="w-screen h-[calc(100vh-6rem)] flex items-center justify-center text-8xl text-center"
+          style={{
+            backgroundImage:
+              'url("https://images.pexels.com/photos/123335/pexels-photo-123335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")',
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
           Code Creations and Digital Revelations
         </div>
         <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
