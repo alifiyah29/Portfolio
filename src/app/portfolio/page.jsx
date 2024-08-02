@@ -97,15 +97,16 @@ const PortfolioPage = () => {
     >
       <div className="h-[600vh] relative" ref={ref}>
         <div
-          className="w-screen h-[calc(100vh-6rem)] flex items-center justify-center text-8xl text-center"
+          className="w-screen h-[calc(100vh-6rem)] flex items-center justify-center text-8xl text-center bg-cover bg-center relative"
           style={{
             backgroundImage:
               'url("https://images.pexels.com/photos/123335/pexels-photo-123335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")',
-            backgroundSize: "cover",
-            backgroundPosition: "center",
           }}
         >
-          Code Creations and Digital Revelations
+          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+          <h1 className="relative text-white bg-black bg-opacity-60 p-4 rounded-lg">
+            Code Creations and Digital Revelations
+          </h1>
         </div>
         <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
           <motion.div style={{ x }} className="flex">
