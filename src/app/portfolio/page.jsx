@@ -116,7 +116,7 @@ const PortfolioPage = () => {
                 className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color}`}
                 key={item.id}
               >
-                <div className="flex flex-col gap-8 text-white items-center">
+                <div className="flex flex-col gap-8 text-white items-center px-4 md:px-8 lg:px-12">
                   <h1 className="text-xl font-bold md:text-4xl lg:text-6xl xl:text-8xl">
                     {item.title}
                   </h1>
@@ -138,7 +138,7 @@ const PortfolioPage = () => {
                       </motion.div>
                     ))}
                   </div>
-                  <h1 className="w-full md:w-3/4 lg:w-1/2 xl:w-1/2 font-bold text-2xl md:text-3xl lg:text-4xl">
+                  <h1 className="w-full font-bold text-2xl md:text-3xl lg:text-4xl text-center">
                     {item.desc}
                     <button
                       className="ml-2 text-lg text-yellow-400 hover:text-yellow-300"
@@ -149,7 +149,7 @@ const PortfolioPage = () => {
                   </h1>
                   <motion.div
                     className={`overflow-hidden transition-max-height duration-500 ease-in-out ${
-                      expandedItem === item.id ? "max-h-[500px]" : "max-h-0"
+                      expandedItem === item.id ? "max-h-[800px]" : "max-h-0"
                     }`}
                   >
                     <ul className="list-disc list-inside space-y-2 px-4 md:px-8 lg:px-12 text-left text-lg md:text-xl lg:text-2xl">
@@ -174,9 +174,9 @@ const PortfolioPage = () => {
           </motion.div>
         </div>
       </div>
-      <div className="w-screen h-screen flex flex-col gap-16 items-center justify-center text-center">
-        <h1 className="text-8xl">
-          Have a project? Let us turn that dream into a digital reality!
+      <div className="w-screen h-screen flex flex-col gap-16 items-center justify-center text-center px-4 md:px-8 lg:px-12">
+        <h1 className="text-4xl md:text-6xl lg:text-8xl">
+          Have a project? Let&apos;s turn that dream into a digital reality!
         </h1>
         <div className="relative">
           <motion.svg
