@@ -2,8 +2,8 @@
 
 import React, { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import SoftwareEngineer from "@/app/Experiences/SoftwareEngineer";
-import SoftwareDeveloperIntern from "@/app/Experiences/SoftwareDeveloperIntern";
+import SoftwareEngineer from "@/components/SoftwareEngineer";
+import SoftwareDeveloperIntern from "@/components/SoftwareDeveloperIntern";
 import Link from "next/link";
 
 const EducationAndExperience = () => {
