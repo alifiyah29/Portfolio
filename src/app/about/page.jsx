@@ -1,7 +1,7 @@
 // about page
 "use client";
 
-import Brain from "@/components/brain";
+import Brain from "@/components/Brain";
 import EducationAndExperience from "@/components/EducationAndExperience";
 import Hobbies from "@/components/Hobbies";
 import Skills from "@/components/Skills";

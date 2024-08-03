@@ -132,7 +132,7 @@ const PortfolioPage = () => {
                         <Image
                           src={src}
                           alt=""
-                          layout="fill"
+                          fill="fill"
                           className="object-cover"
                         />
                       </motion.div>
