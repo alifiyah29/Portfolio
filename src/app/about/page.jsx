@@ -1,15 +1,16 @@
-// about page
 "use client";
 
+import { useState, useRef } from "react";
+import { motion, useScroll } from "framer-motion";
+import Image from "next/image";
 import Brain from "@/components/Brain";
 import EducationAndExperience from "@/components/EducationAndExperience";
 import Hobbies from "@/components/Hobbies";
 import Skills from "@/components/Skills";
-import { motion, useScroll } from "framer-motion";
-import Image from "next/image";
-import { useRef } from "react";
+import Achievements from "@/components/Achievements";
 
 const AboutPage = () => {
+  const [showAchievements, setShowAchievements] = useState(false);
   const containerRef = useRef();
 
   const { scrollYProgress } = useScroll({ container: containerRef });
@@ -70,6 +71,13 @@ const AboutPage = () => {
                 />
               </svg>
             </div>
+            {/* ACHIEVEMENTS BUTTON */}
+            <button
+              className="mt-4 px-4 py-2 bg-black text-white rounded hover:bg-white hover:text-black transition duration-300"
+              onClick={() => setShowAchievements(true)}
+            >
+              View My Achievements
+            </button>
             {/* BIOGRAPHY SCROLL SVG */}
             <motion.svg
               initial={{ opacity: 0.2, y: 0 }}
@@ -112,6 +120,10 @@ const AboutPage = () => {
           <Brain scrollYProgress={scrollYProgress} />
         </div>
       </div>
+      {/* ACHIEVEMENTS MODAL */}
+      {showAchievements && (
+        <Achievements setShowAchievements={setShowAchievements} />
+      )}
     </motion.div>
   );
 };
