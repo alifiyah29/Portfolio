@@ -18,14 +18,31 @@ const items = [
       "/Chatify.jpg",
     ],
     details: [
-      "Developed Chatify a sophisticated real-time chat application employing the MVC (Model-View-Controller) architecture to ensure clear separation of concerns. The Model layer utilizes MongoDB for scalable and flexible data storage, where user profiles and chat messages are organized in distinct collections. The View layer is built using ReactJS, providing a dynamic and responsive user interface with reusable components that streamline the development process and improve maintainability. The Controller layer, powered by NodeJS and ExpressJS, handles server-side logic, user authentication, and message routing, facilitating efficient communication between the front end and the database.",
-      "Implemented robust real-time communication features using WebSockets in conjunction with NodeJS and ExpressJS. This integration ensures that users receive instant updates and notifications as messages are sent and received. The application’s real-time capabilities are crucial for maintaining an interactive and engaging user experience, which is essential for any modern chat application.",
-      "Successfully deployed the Chatify application on AWS, leveraging cloud services to ensure a robust, scalable, and accessible platform for users. Configured and managed AWS resources to handle varying loads and provide high availability, allowing the application to scale efficiently and maintain performance under different usage scenarios. This experience enhanced my proficiency in cloud infrastructure and deployment strategies.",
-      "Gained comprehensive hands-on experience with a suite of modern web development technologies. By building and deploying Chatify, I deepened my understanding of ReactJS for front-end development, NodeJS and ExpressJS for backend services, and MongoDB for data storage. This project not only improved my technical skills but also provided practical insights into integrating these technologies to create a cohesive and scalable web application.",
+      "Built a real-time chat app using MVC architecture with Next.js and Socket.io, handling over 10,000 messages daily.",
+      "Implemented responsive UI with server-side rendering for performance and SEO improvements.",
+      "Managed user data and chat histories using MongoDB, ensuring scalable data storage.",
+      "Deployed on AWS, reducing deployment time by 50%.",
     ],
+    url: "https://github.com/alifiyah29/Chatify",
   },
   {
     id: 2,
+    color: "from-blue-300 to-violet-300",
+    title: "Task-Alchemy",
+    desc: "Ticketing App",
+    img: [
+      "https://images.pexels.com/photos/7376/startup-photos.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/7163353/pexels-photo-7163353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/3243/pen-calendar-to-do-checklist.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    ],
+    details: [
+      "Developed a ticketing system with Next.js, ensuring smooth user experience and secure task management.",
+      "Utilized Redux for consistent state management and backend API for reliable data handling.",
+    ],
+    url: "https://github.com/alifiyah29/ToDo-App",
+  },
+  {
+    id: 3,
     color: "from-blue-300 to-violet-300",
     title: "Game Genre Analysis",
     desc: "Insightful Database Solution",
@@ -35,31 +52,29 @@ const items = [
       "/GameGenre.png",
     ],
     details: [
-      "Designed and implemented a hybrid database solution combining MySQL and MongoDB to analyze player behavior. MySQL was used to store structured game data such as genres and ratings, enabling efficient querying. MongoDB, integrated with Apache Kafka, captured real-time player activity data, including playtime and preferences, allowing for flexible and scalable data storage.",
-      "Utilized Apache Kafka to handle real-time data capture and processing, which facilitated immediate insights into player behavior. This setup allowed for rapid data ingestion and analysis, providing actionable insights through interactive Tableau dashboards that revealed trends such as playtime patterns and genre preferences.",
-      "Created interactive Tableau dashboards to transform complex gaming data into actionable insights. The dashboards enabled users to visualize player behavior trends and genre preferences, enhancing the ability to make informed decisions based on real-time data analysis.",
-      "The project solidified skills in designing and implementing scalable hybrid database architectures, combining MySQL’s efficiency with MongoDB’s flexibility. It also provided valuable experience in translating complex data into actionable insights through Tableau, essential for data-driven decision-making in the gaming industry.",
+      "Created a hybrid database combining MySQL and MongoDB for player behavior analysis.",
+      "Used Apache Kafka for real-time data processing and Tableau for actionable insights.",
+      "Enhanced decision-making through interactive dashboards visualizing player trends.",
     ],
   },
   {
-    id: 3,
+    id: 4,
     color: "from-violet-300 to-purple-300",
-    title: "Air Quality Monitoring System",
-    desc: "IoT Based System",
+    title: "AQMS",
+    desc: "Air Quality Monitoring System",
     img: [
       "https://images.pexels.com/photos/929385/pexels-photo-929385.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "https://images.pexels.com/photos/459728/pexels-photo-459728.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "/AirQuality.png",
     ],
     details: [
-      "Designed and built an Air Quality Monitoring System using Arduino-based sensors to collect air quality data from multiple locations. The system provided real-time monitoring of air pollution levels, allowing for timely responses to environmental changes.",
-      "Developed a web platform to visualize air quality data in real-time, featuring interactive charts and graphs for easy interpretation. The platform enabled users to monitor air quality across different districts and track trends over time.",
-      "Analyzed the collected air quality data to identify patterns and trends, contributing to a better understanding of local air quality conditions. This analysis helped in making data-driven decisions for improving environmental health.",
-      "Published a research paper detailing the project's methodology, findings, and implications for air quality management. The paper highlighted the project's contribution to understanding and managing air pollution through innovative technology and data analysis.",
+      "Developed an Arduino-based system to monitor air quality in real-time.",
+      "Built a web platform with interactive charts for data visualization.",
+      "Analyzed patterns and published findings for air quality management.",
     ],
   },
   {
-    id: 4,
+    id: 5,
     color: "from-purple-300 to-red-300",
     title: "Let Us Write Online",
     desc: "Blogging Website",
@@ -69,10 +84,9 @@ const items = [
       "https://images.pexels.com/photos/733856/pexels-photo-733856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     ],
     details: [
-      "Built Let Us Write Online, a blogging platform utilizing MongoDB, Express.js, React.js, and Node.js to provide a comprehensive solution for content creation and management. The platform includes features for user accounts, content creation, and moderation.",
-      "Implemented user accounts and comment sections to enhance user engagement and interaction. The platform supports various content types and allows for community participation through features like comments and moderation.",
-      "Achieved significant user growth and increased content creation by developing effective user engagement strategies. These strategies included interactive features and user-friendly design elements to attract and retain users.",
-      "Led the development process from inception to launch, ensuring timely delivery and successful platform deployment. This experience demonstrated project management skills and the ability to deliver a fully functional and scalable blogging solution.",
+      "Built a comprehensive blogging platform using the MERN stack.",
+      "Implemented user engagement features, boosting platform growth.",
+      "Led development and deployment, ensuring a scalable solution.",
     ],
   },
 ];
@@ -138,42 +152,53 @@ const PortfolioPage = () => {
                       </motion.div>
                     ))}
                   </div>
-                  <h1 className="w-full font-bold text-2xl md:text-3xl lg:text-4xl text-center">
-                    {item.desc}
-                    <button
-                      className="ml-2 text-lg text-yellow-400 hover:text-yellow-300"
-                      onClick={() => toggleDetails(item.id)}
-                    >
-                      <FaChevronDown />
-                    </button>
-                  </h1>
+                  <div className="flex flex-col items-center gap-4">
+                    <h1 className="w-full font-bold text-2xl md:text-3xl lg:text-4xl text-center">
+                      {item.desc}
+                    </h1>
+                    {(item.id === 1 || item.id === 2) && (
+                      <motion.a
+                        href={item.url}
+                        target="_blank"
+                        className="bg-yellow-400 text-black font-bold py-2 px-4 rounded-lg hover:bg-yellow-300"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                      >
+                        Learn More
+                      </motion.a>
+                    )}
+                  </div>
                   <motion.div
-                    className={`overflow-hidden transition-max-height duration-500 ease-in-out ${
-                      expandedItem === item.id ? "max-h-[800px]" : "max-h-0"
+                    className={`overflow-hidden transition-all duration-500 ${
+                      expandedItem === item.id ? "max-h-[300px]" : "max-h-0"
                     }`}
                   >
-                    <ul className="list-disc list-inside space-y-2 px-4 md:px-8 lg:px-12 text-left text-lg md:text-xl lg:text-2xl">
-                      {item.details.map((detail, index) => (
-                        <motion.li
-                          key={index}
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{
-                            opacity: expandedItem === item.id ? 1 : 0,
-                            y: expandedItem === item.id ? 0 : 20,
-                          }}
-                          transition={{ duration: 0.3, delay: index * 0.1 }}
-                        >
-                          {detail}
-                        </motion.li>
-                      ))}
-                    </ul>
+                    <div className="mt-4 bg-black bg-opacity-50 p-4 rounded-lg shadow-lg text-sm sm:text-lg">
+                      <ul className="list-disc list-inside">
+                        {item.details.map((detail, index) => (
+                          <li key={index}>{detail}</li>
+                        ))}
+                      </ul>
+                    </div>
                   </motion.div>
+                  <motion.button
+                    onClick={() => toggleDetails(item.id)}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                    className="flex items-center gap-2 px-4 py-2 bg-black bg-opacity-50 rounded-lg text-sm sm:text-lg"
+                  >
+                    Details <FaChevronDown />
+                  </motion.button>
                 </div>
               </div>
             ))}
+            <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-r from-purple-300 to-red-300" />
           </motion.div>
         </div>
       </div>
+
       <div className="w-screen h-screen flex flex-col gap-16 items-center justify-center text-center px-4 md:px-8 lg:px-12">
         <h1 className="text-4xl md:text-6xl lg:text-8xl">
           Have a project? Let&apos;s turn that dream into a digital reality!

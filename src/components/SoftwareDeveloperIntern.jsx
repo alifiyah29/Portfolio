@@ -57,8 +57,7 @@ const SoftwareDeveloperIntern = ({ setShowPrompt }) => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              Software Developer Intern, OneHash Technologies Pvt. Ltd., Indore,
-              MP, India
+              Software Developer Intern, OneHash Technologies Pvt. Ltd., Indore, MP, India
             </motion.h2>
             <motion.p
               className="text-base md:text-lg lg:text-xl text-gray-700 mb-4"
@@ -66,18 +65,12 @@ const SoftwareDeveloperIntern = ({ setShowPrompt }) => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <strong>
-                Enhanced Lead Capture and Nurturing with JavaScript & APIs
-                (Front-End Development):
-              </strong>{" "}
-              Designed and developed custom user interfaces (UIs) with
-              JavaScript to seamlessly integrate lead generators like Salesforce
-              Leads and Mailchimp into OneHash&aposs CRM. I leveraged these APIs
-              to understand data structures and establish a smooth flow of lead
-              information between platforms. This streamlined lead capture for
-              clients, eliminating the need to switch platforms, and automated
-              data transfer to OneHash&aposs database, improving lead nurturing
-              efficiency.
+              <strong>Integration of Customer Feedback Portal into OneHash CRM:</strong> 
+              I collaborated with the frontend development team to integrate a React.js-based feedback portal directly into the OneHash CRM. This portal allowed users to submit feedback and rate services, significantly improving user engagement within the CRM by 40%. My work involved:
+              <ul className="list-disc list-inside mt-2">
+                <li><strong>React.js Development:</strong> Utilized React Hooks and the react-responsive library to create a dynamic and responsive user interface. The use of React Hooks enabled efficient state management and component reusability, while the react-responsive library ensured that the portal was fully optimized for various screen sizes, enhancing overall user experience.</li>
+                <li><strong>API Integration:</strong> Implemented seamless API integration using Axios to connect the frontend with backend services, facilitating real-time feedback submissions and data retrieval. This integration ensured smooth data flow and improved the responsiveness of the portal, contributing to its effectiveness.</li>
+              </ul>
             </motion.p>
             <motion.p
               className="text-base md:text-lg lg:text-xl text-gray-700 mb-4"
@@ -85,15 +78,8 @@ const SoftwareDeveloperIntern = ({ setShowPrompt }) => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <strong>Automated Data Transfer with JavaScript:</strong>{" "}
-              Implemented functionalities within the custom UI to automatically
-              transfer captured lead data to OneHash&aposs secure database using
-              JavaScript. This involved writing code to handle data manipulation
-              and API calls to the database. By automating data transfer, I
-              eliminated manual entry for clients and improved the lead
-              nurturing process. This solidified my front-end development
-              skills, requiring proficiency in data handling and API
-              interaction.
+              <strong>Design and Implementation of Role-Based Access Control (RBAC) System:</strong> 
+              I played a key role in the design and implementation of a React.js and React Router-powered RBAC system within the CRM. This system provided secure and tailored access to different user roles (admins, customers, staff), ensuring that each user could only access the functionalities relevant to their role. This enhanced the security and usability of the CRM, making it more adaptable to the needs of different users.
             </motion.p>
             <motion.p
               className="text-base md:text-lg lg:text-xl text-gray-700 mb-4"
@@ -101,15 +87,8 @@ const SoftwareDeveloperIntern = ({ setShowPrompt }) => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <strong>
-                Expanded Technical Understanding through API Integration:
-              </strong>{" "}
-              Through in-depth work with lead generation APIs like Salesforce
-              Leads and Mailchimp, I gained valuable experience in understanding
-              data structures and communication protocols used by external
-              applications. This broadened my technical knowledge beyond UI
-              development and prepared me for future integrations with various
-              external services.
+              <strong>Mobile Performance Optimization:</strong> 
+              Worked on optimizing the feedback portal for mobile devices by enhancing image assets and implementing performance optimizations, such as code splitting and lazy loading. These efforts resulted in a 30% reduction in load times, ensuring smooth accessibility and a better user experience on mobile platforms.
             </motion.p>
             <motion.p
               className="text-base md:text-lg lg:text-xl text-gray-700 mb-4"
@@ -117,8 +96,7 @@ const SoftwareDeveloperIntern = ({ setShowPrompt }) => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-              <strong>Skills Acquired:</strong> JavaScript, Salesforce API,
-              Mailchimp API, UI/UX Design, CRM Integration.
+              <strong>Technologies Used:</strong> JavaScript, React.js, React Router, Axios, Frappe Framework, MariaDB, Salesforce, AWS.
             </motion.p>
           </div>
         </motion.div>

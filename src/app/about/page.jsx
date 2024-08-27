@@ -33,8 +33,8 @@ const AboutPage = () => {
             <Image
               src="/myPic.jpg"
               alt=""
-              width={112}
-              height={112}
+              width={200}
+              height={200}
               className="w-28 h-28 rounded-full object-cover"
             />
             {/* BIOGRAPHY TITLE */}
