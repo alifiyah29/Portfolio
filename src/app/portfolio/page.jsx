@@ -60,8 +60,8 @@ const items = [
   {
     id: 4,
     color: "from-violet-300 to-purple-300",
-    title: "AQMS",
-    desc: "Air Quality Monitoring System",
+    title: "Air Quality Monitoring System",
+    desc: "IoT Based System",
     img: [
       "https://images.pexels.com/photos/929385/pexels-photo-929385.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "https://images.pexels.com/photos/459728/pexels-photo-459728.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
