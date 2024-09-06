@@ -74,20 +74,24 @@ const Homepage = () => {
 
           {/* BUTTONS */}
           <div className="w-full flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <motion.button
-              className="p-4 rounded-lg ring-1 ring-white text-white hover:bg-white hover:text-black transition-colors"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Link href="/portfolio">My Work</Link>
-            </motion.button>
-            <motion.button
-              className="p-4 rounded-lg ring-1 ring-white text-white hover:bg-white hover:text-black transition-colors"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Link href="/contact">Contact Me</Link>
-            </motion.button>
+            <Link href="/portfolio">
+              <motion.button
+                className="p-4 rounded-lg ring-1 ring-white text-white hover:bg-white hover:text-black transition-colors w-full"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                My Work
+              </motion.button>
+            </Link>
+            <Link href="/contact">
+              <motion.button
+                className="p-4 rounded-lg ring-1 ring-white text-white hover:bg-white hover:text-black transition-colors w-full"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Contact Me
+              </motion.button>
+            </Link>
           </div>
         </div>
       </div>
