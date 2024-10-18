@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useState } from "react";
 import NavLink from "./NavLink";
 import { motion } from "framer-motion";
-import Logo from "./Logo";
 
 const links = [
   { url: "/", title: "Home" },
@@ -88,19 +87,16 @@ const Navbar = () => {
   };
 
   return (
-    <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl bg-transparent">
+    <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl ">
       {/* LINKS */}
-      <div className="hidden md:flex gap-4 w-1/3">
+      <div className="hidden md:flex gap-4">
         {links.map((link) => (
           <NavLink link={link} key={link.title} />
         ))}
       </div>
-      {/* LOGO */}
-      <div className="md:hidden lg:flex xl:w-1/3 xl:justify-center">
-        <Logo />
-      </div>
-      {/* SOCIAL */}
-      <div className="hidden md:flex gap-4 w-1/3">
+
+      {/* SOCIAL LINKS - MOVED TO EXTREME RIGHT */}
+      <div className="hidden md:flex gap-4 ml-auto">
         {socialLinks.map((social) => (
           <Link
             href={social.url}
@@ -112,6 +108,7 @@ const Navbar = () => {
           </Link>
         ))}
       </div>
+
       {/* RESPONSIVE MENU */}
       <div className="md:hidden">
         {/* MENU BUTTON */}
@@ -122,19 +119,20 @@ const Navbar = () => {
           <motion.div
             variants={topVariants}
             animate={open ? "opened" : "closed"}
-            className="w-10 h-1 bg-black rounded origin-left"
+            className="w-10 h-1 bg-white rounded origin-left"
           ></motion.div>
           <motion.div
             variants={centerVariants}
             animate={open ? "opened" : "closed"}
-            className="w-10 h-1 bg-black rounded"
+            className="w-10 h-1 bg-white rounded"
           ></motion.div>
           <motion.div
             variants={bottomVariants}
             animate={open ? "opened" : "closed"}
-            className="w-10 h-1 bg-black rounded origin-left"
+            className="w-10 h-1 bg-white rounded origin-left"
           ></motion.div>
         </button>
+
         {/* MENU LIST */}
         {open && (
           <motion.div
